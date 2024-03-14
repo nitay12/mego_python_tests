@@ -13,26 +13,31 @@
 import random
 
 
+# def is_set_of_friends(arr):
+#     if len(arr) % 2 != 0:
+#         return False
+#     checked_numbers = []
+#     for i in range(len(arr)):
+#         count = 0
+#         checked = False
+#         for j in range(len(checked_numbers)):
+#             if arr[i] == checked_numbers[j]:
+#                 checked = True
+#         if not checked:
+#             for k in range(i + 1, len(arr)):
+#                 if arr[i] == arr[k]:
+#                     count += 1
+#             if count != 1:
+#                 return False
+#             checked_numbers.append(arr[i])
+#     return True
+
+# version 2
 def is_set_of_friends(arr):
-    if len(arr) % 2 != 0:
-        return False
-    checked_numbers = []
-    for i in range(len(arr)):
-        count = 0
-        checked = False
-        for j in range(len(checked_numbers)):
-            if arr[i] == checked_numbers[j]:
-                checked = True
-        if not checked:
-            for k in range(i + 1, len(arr)):
-                if arr[i] == arr[k]:
-                    count += 1
-            if count != 1:
-                return False
-            checked_numbers.append(arr[i])
+    for i in arr:
+        if arr.count(i) != 2:
+            return False
     return True
-
-
 # 2.
 # version 1:
 # while True:
@@ -59,7 +64,7 @@ def create_unique_item(arr):
             break
         
         
-for i in range(10):
-    create_unique_item(arr)
-if is_set_of_friends(arr):
-    print(arr)
+# for i in range(10):
+#     create_unique_item(arr)
+# if is_set_of_friends(arr):
+#     print(arr)
