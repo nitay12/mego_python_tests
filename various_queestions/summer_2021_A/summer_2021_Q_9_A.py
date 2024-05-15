@@ -1,8 +1,8 @@
 # A
 def exchange(number):
-    if number < 10:
-        return True
     while number > 0:
+        if number < 10:
+            return True
         if (number % 10) % 2 == (number // 10 % 10) % 2:
             return False
         number //= 10
